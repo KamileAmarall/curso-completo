@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
       <link rel="shortcut icon" href="imagenss/vscode-icon (2).png" type="image/x-icon">   
      <style>
-        body {
+        /* body {
             height: 100vh;
             background-color: black;
             background-image: url(imagenss/wallpaper002.jpg);
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: auto;/*Esse valor é indicado usar sempre para que o tamanho da  imagem nn seja prejudicado ao navegar em outros monitores de tamanho diferentes.*/
+            background-size: cover;
+            background-attachment: fixed;
+        */
+            
+            /* background-size: O  valor de 100% é indicado usar sempre para que o tamanho da  imagem nn seja prejudicado ao navegar em outros monitores de tamanho diferentes.*/
             /*   [VALORES QUE SÃO ACEITOS POR 'background-size']
             **containt**:A imagem vai ser 100% exibida no site;
              **cover**:Irá cobrir a tela;
              **auto**: O navegador vai definir para exibir o tamanho ideal da imagem;
              **tamanho fixo**:seria o tamanho determinado;
              */
-        }
+            /*Shorthand - background
+                 color > image > position > repeat > [size] > attachment
+                 função da shorthand:Será uma forma simplificada da configuração geral do seletor'body'
+              resultado:             
+              background: black url('imagenss/wallpaper002.jpg') center center no-repeat cover fixed;
+            */
+
+            body {
+               background: black url('imagenss/wallpaper002.jpg') center center no-repeat  fixed;
+               background-size: cover; /*ele n funcionou com os navegadores na shorthand*/
+            }
+        
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
